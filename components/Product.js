@@ -6,7 +6,7 @@ function Product({ image, title, sizes, price }) {
       <View style={[styles.orderItem]}>
         <Image style={[styles.coffeeIcon]} source={{ uri: image }}></Image>
         <Text style={[styles.titleItem]}>{title}</Text>
-        <Text style={[styles.sizesItem]}>{sizes}</Text>
+        <Text style={[styles.ammountLastOrderItem]}>{sizes}</Text>
         <View style={[styles.buttonContainer]}>
           <Pressable style={[styles.confirmButton]}>
             <Image

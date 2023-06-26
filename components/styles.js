@@ -126,8 +126,8 @@ export default StyleSheet.create({
     borderRadius: 5,
   },
   repeactIcon: {
-    height: 10,
-    width: 10,
+    height: 15,
+    width: 15,
   },
   repeatTextButton: {
     color: "white",
@@ -141,6 +141,7 @@ export default StyleSheet.create({
   },
   nameLastOrderItem: {
     fontWeight: 600,
+    fontSize:16
   },
   ammountLastOrderItem: {
     fontSize: 14,
@@ -160,8 +161,6 @@ export default StyleSheet.create({
   orderItemContainer: {
     marginHorizontal: 4,
     marginVertical: 4,
-
-    elevation: 48,
   },
   coffeeIcon: {
     width: 164,
@@ -170,10 +169,11 @@ export default StyleSheet.create({
   },
   titleItem: {
     fontWeight: 500,
+    fontSize: 18
   },
   confirmButton: {
-    width: 56,
-    height: 26,
+    width: 100,
+    height: 35,
     backgroundColor: "#4A4A49",
     alignSelf: "flex-start",
     alignItems: "center",
@@ -181,8 +181,8 @@ export default StyleSheet.create({
     borderRadius: 5,
   },
   confirmIcon: {
-    width: 10,
-    height: 10,
+    width: 15,
+    height: 15,
   },
   sizesItem: {
     fontSize: 11,
@@ -194,10 +194,11 @@ export default StyleSheet.create({
   orderItem: {
     height: 250,
     justifyContent: "space-around",
+    elevation:10
   },
   buttonContainer: {
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
   languagesContainer: {
     backgroundColor: "lightgray",

@@ -15,6 +15,7 @@ export default function OrderContainer() {
   return (
     <View style={[styles.orderContainer]}>
       <FlatList
+      bounces={0}
         ListHeaderComponent={() => (
           <View>
             <View style={[styles.searchContainer]}>

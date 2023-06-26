@@ -19,7 +19,8 @@ export default LayoutScreen = () => {
 
       <StoriesBox />
 
-      <OrderContainer />
+      <OrderContainer/>
+     
     </View>
   );
 };
