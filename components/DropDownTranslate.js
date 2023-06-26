@@ -3,7 +3,7 @@ import SelectDropdown from "react-native-select-dropdown";
 function DropDownTranslate({ languages, setTarget }) {
   return (
     <SelectDropdown
-      label={'123'}
+      defaultButtonText={"Выберите язык"}
       data={languages}
       buttonTextAfterSelection={(selectedItem) => {
         return selectedItem.name;

@@ -34,15 +34,13 @@ export default TranslateScreen = ({ navigation }) => {
     setResult(text);
   };
 
-
   return (
     <View>
       <View style={{ alignItems: "center" }}>
         <DropDownTranslate setTarget={setSource} languages={languages} />
         <TranslateInput
-        setText={setText}
+          setText={setText}
           handleClick={handleClick}
-          
           placeholder="Введите ваш текст"
         />
         <View style={[styles.languagesContainer]}>
@@ -53,13 +51,10 @@ export default TranslateScreen = ({ navigation }) => {
               source={require("../assets/icons/swapIcon.png")}
             ></Image>
           </Pressable>
-         
-            <Text> Язык на который переводим {target}</Text>
-         
+          <Text> Язык на который переводим {target}</Text>
         </View>
         <DropDownTranslate setTarget={setTarget} languages={languages} />
-        <TranslateInput  placeholder="Перевод" value={result} />
-     
+        <TranslateInput placeholder="Перевод" value={result} />
       </View>
       <Button
         title="Перейти к макету"
