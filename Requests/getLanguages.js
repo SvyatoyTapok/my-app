@@ -21,6 +21,5 @@ export async function getLanguages(target) {
   });
 
   const result = await res.json();
-  console.log(result.data.languages)
   return result.data.languages;
 }

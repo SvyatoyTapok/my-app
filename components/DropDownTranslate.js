@@ -1,8 +1,9 @@
 import SelectDropdown from "react-native-select-dropdown";
 
-function DropDownTranslate({languages}) {
+function DropDownTranslate({ languages, setTarget }) {
   return (
     <SelectDropdown
+      label={'123'}
       data={languages}
       buttonTextAfterSelection={(selectedItem) => {
         return selectedItem.name;
@@ -18,4 +19,4 @@ function DropDownTranslate({languages}) {
   );
 }
 
-export default DropDownTranslate
+export default DropDownTranslate;

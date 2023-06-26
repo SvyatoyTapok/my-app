@@ -3,26 +3,26 @@ import { useState } from "react";
 import { View } from "react-native";
 import styles from "./styles";
 
-function translateScreen(props) {
+function TranslateInput({placeholder, value, setText, handleClick, editable}) {
   const [heightValue, setHeightValue] = useState(40);
   return (
-    <View
-      style={[styles.TextBoxes, {height: heightValue}]}
-    >
+    <View style={[styles.TextBoxes, { height: heightValue }]}>
       <TextInput
-        onChangeText={props.onChangeText}
+        onChangeText={setText}
+        onChange={handleClick}
         onLayout={(event) => {
           if (event.nativeEvent.layout) {
             setHeightValue(event.nativeEvent.layout.height + 40);
           }
         }}
+        editable={editable}
         multiline
-        value={props.value}
-        placeholder={props.placeholder}
-        style={{ textAlign: "center", fontSize: 20}}
+        value={value}
+        placeholder={placeholder}
+        style={{ textAlign: "center", fontSize: 20 }}
+
       />
     </View>
   );
 }
-
-export default translateScreen;
+export default TranslateInput;

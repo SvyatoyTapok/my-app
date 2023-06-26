@@ -4,7 +4,6 @@ import TranslateInput from "../components/TranslateInput";
 import { postRequest } from "../Requests/postRequest";
 import { getLanguages } from "../Requests/getLanguages";
 import styles from "../components/styles";
-import SelectDropdown from "react-native-select-dropdown";
 import DropDownTranslate from "../components/DropDownTranslate";
 
 export default TranslateScreen = ({ navigation }) => {
@@ -17,7 +16,7 @@ export default TranslateScreen = ({ navigation }) => {
   useEffect(() => {
     async function fetchData() {
       const response = await getLanguages(target);
-      setLanguages(response)
+      setLanguages(response);
     }
     fetchData();
   }, []);
@@ -28,44 +27,39 @@ export default TranslateScreen = ({ navigation }) => {
     setResult(translatedText);
   };
 
-  const handleChoose = async () => {
-    const response = await getLanguages(target);
-    setLanguages(response);
-  };
-
   const handleSwap = async () => {
     setSource(target);
     setTarget(source);
+    setText(result);
+    setResult(text);
   };
+
+
   return (
     <View>
       <View style={{ alignItems: "center" }}>
+        <DropDownTranslate setTarget={setSource} languages={languages} />
         <TranslateInput
-          onChangeText={setText}
+        setText={setText}
+          handleClick={handleClick}
+          
           placeholder="Введите ваш текст"
         />
         <View style={[styles.languagesContainer]}>
-          <View style={[styles.sourceLanguage]}>
-            <Text> Ваш язык {source}</Text>
-          </View>
+          <Text> Ваш язык {source}</Text>
           <Pressable onPress={handleSwap}>
             <Image
               style={{ width: 20, height: 20 }}
               source={require("../assets/icons/swapIcon.png")}
             ></Image>
           </Pressable>
-          <View style={[styles.targetLanguage]}>
+         
             <Text> Язык на который переводим {target}</Text>
-          </View>
+         
         </View>
-        <View style={[styles.languagePicker]}></View>
-        <View style={[styles.languagesContainer]}>
-          <Pressable onPress={handleChoose} style={[styles.languagePicker]}>
-          <DropDownTranslate setTarget={setTarget} languages={languages}/>
-          </Pressable>
-        </View>
-        <TranslateInput placeholder="Перевод" value={result} />
-        <Button onPress={handleClick} title="Запрос"></Button>
+        <DropDownTranslate setTarget={setTarget} languages={languages} />
+        <TranslateInput  placeholder="Перевод" value={result} />
+     
       </View>
       <Button
         title="Перейти к макету"
