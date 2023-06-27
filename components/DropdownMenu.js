@@ -1,6 +1,7 @@
 import { View, Text, Pressable, FlatList } from "react-native";
 import styles from "./styles";
 import Addresses from "./Addresses";
+// todo: инлайн стили
 function DropdownMenu({ setAddress, setactiveDropdownMenu, activeDropMenu }) {
   return (
     <View style={styles.dropdownContainer}>

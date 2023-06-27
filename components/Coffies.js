@@ -1,3 +1,5 @@
+// todo: вынести в lib/constants, это не компонент
+// COFFIES
 const Coffies = [
   {
     image:

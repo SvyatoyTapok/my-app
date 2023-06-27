@@ -1,5 +1,7 @@
 import { StyleSheet } from "react-native";
 
+// todo: каждому компоненту свой стиль
+
 export default StyleSheet.create({
   TextBoxes: {
     borderColor: "gray",

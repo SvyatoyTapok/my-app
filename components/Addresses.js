@@ -1,3 +1,5 @@
+// todo: вынести в lib/constants, это не компонент
+// ADDRESSES
 const Addresses = [
     {
         address: 'Анкудиновка, Свободы, 5к2'
