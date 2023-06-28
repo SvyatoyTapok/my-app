@@ -1,6 +1,6 @@
 // todo: вынести в lib/constants, это не компонент
 // ADDRESSES
-const Addresses = [
+const ADDRESSES = [
     {
         address: 'Анкудиновка, Свободы, 5к2'
     },
@@ -17,4 +17,4 @@ const Addresses = [
         address: 'Лескова, 18'
     },
 ]
-export default Addresses
+export default ADDRESSES

@@ -1,12 +1,20 @@
 import { View, Text, Pressable, FlatList } from "react-native";
 import styles from "./styles";
 import Addresses from "./Addresses";
-// todo: инлайн стили
+import { StyleSheet } from "react-native";
+
 function DropdownMenu({ setAddress, setactiveDropdownMenu, activeDropMenu }) {
+  const stylesForSeparator = StyleSheet.create({
+    backgroundColor: "lightgray",
+    alignSelf: "center",
+    borderRadius: 10,
+    width: "90%",
+    height: 0.5,
+  });
   return (
     <View style={styles.dropdownContainer}>
       <FlatList
-        ItemSeparatorComponent={<View style={{backgroundColor:'lightgray',alignSelf:'center',borderRadius:10, width:"90%",height:0.5}}/>}
+        ItemSeparatorComponent={<View style={stylesForSeparator} />}
         data={Addresses}
         renderItem={({ item }) => (
           <Pressable

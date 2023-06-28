@@ -1,6 +1,6 @@
 // todo: вынести в lib/constants, это не компонент
 // COFFIES
-const Coffies = [
+const COFFIES = [
   {
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJiC0PsRdoJuGqV8QRM99bHnBbLULh4mIIig&usqp=CAU",
@@ -108,4 +108,4 @@ const Coffies = [
   },
 ];
 
-export default Coffies;
+export default COFFIES;
