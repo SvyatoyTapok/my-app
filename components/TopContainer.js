@@ -1,11 +1,17 @@
+import {useCallback} from 'react';
 import { View, Pressable, Text, Image } from "react-native";
 import DropdownMenu from "./DropdownMenu";
 import styles from "./styles";
 
 export default function TopContainer({address,setAddress, activeDropdownMenu, setactiveDropdownMenu}) {
+  const handlePressAddress = useCallback(() => {
+    setactiveDropdownMenu(!activeDropdownMenu)
+  }, [setactiveDropdownMenu, activeDropdownMenu])
+
   return (
     <View style={[styles.topContainer]}>
-      <Pressable onPress={() => setactiveDropdownMenu(!activeDropdownMenu)}>
+      {/*todo: инлайн функции*/}
+      <Pressable onPress={handlePressAddress}>
         <Text style={[styles.topText]}>{address}</Text>
       </Pressable>
       {activeDropdownMenu ? (

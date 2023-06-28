@@ -1,3 +1,4 @@
+// todo: типизируй (все js файлы)
 export async function postRequest(text, source, target) {
   const baseUrl = "https://translation.googleapis.com/language/translate/v2";
 

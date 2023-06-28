@@ -4,6 +4,7 @@ import {View, Text} from 'react-native'
 import StoriesItem from "./StoriesItem";
 import storiesImages from "../assets/images/images";
 export default function StoriesBox(){
+    //todo: инлайн стили
     return(
         <View style={[styles.storiesBox]}>
         <View style={[styles.storiesTitle]}>

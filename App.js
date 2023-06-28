@@ -14,7 +14,7 @@ export default function App() {
   if (!loaded) {
     return null;
   }
-
+  // todo: вынести стек в отдельную папку с навигацией
   function MyStack() {
     return (
       <Stack.Navigator>

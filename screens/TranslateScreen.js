@@ -5,6 +5,7 @@ import { postRequest } from "../Requests/postRequest";
 import { getLanguages } from "../Requests/getLanguages";
 import styles from "../components/styles";
 import DropDownTranslate from "../components/DropDownTranslate";
+// todo: определить TranslateScreen
 
 export default TranslateScreen = ({ navigation }) => {
   const [text, setText] = useState();
@@ -58,6 +59,7 @@ export default TranslateScreen = ({ navigation }) => {
       </View>
       <Button
         title="Перейти к макету"
+        {/*todo: ни слова по русскики в навигации*/}
         onPress={() => navigation.navigate("Макет")}
       />
     </View>

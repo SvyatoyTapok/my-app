@@ -1,3 +1,4 @@
+// todo: лучше скачать и делать через require
 const storiesImages = [
     {
         src: "https://mpr-shop.ru/upload/iblock/4f3/4f3cc260fbe11fce330861fd5d59d0aa.jpg"
