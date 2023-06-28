@@ -10,6 +10,7 @@ function TranslateInput({placeholder, value, setText, handleClick, editable}) {
       <TextInput
         onChangeText={setText}
         onChange={handleClick}
+        {/*todo: инлайн функции*/}
         onLayout={(event) => {
           if (event.nativeEvent.layout) {
             setHeightValue(event.nativeEvent.layout.height + 40);

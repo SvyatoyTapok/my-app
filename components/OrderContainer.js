@@ -1,3 +1,4 @@
+import icons from '../assets/icons/icons';
 import styles from "./styles";
 import {
   View,
@@ -22,7 +23,7 @@ export default function OrderContainer() {
               <View style={[styles.searchItem]}>
                 <Image
                   style={[styles.searchIcon]}
-                  source={require("../assets/icons/Search.png")}
+                  source={icons.search}
                 ></Image>
                 <TextInput placeholder="Ищу то самое"></TextInput>
               </View>

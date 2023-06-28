@@ -3,7 +3,7 @@ import { View } from "react-native";
 import TopContainer from "../components/TopContainer";
 import StoriesBox from "../components/StoriesBox";
 import OrderContainer from "../components/OrderContainer";
-
+// todo: адрес подставлять сразу из списка констант, убрать инлайн стиль и добавить в него flex: 1, определить LayoutScreen
 export default LayoutScreen = () => {
   const [activeDropdownMenu, setactiveDropdownMenu] = useState(false);
   const [address, setAddress] = useState("Анкудиновка Свободы 5к2");
@@ -20,7 +20,7 @@ export default LayoutScreen = () => {
       <StoriesBox />
 
       <OrderContainer/>
-     
+
     </View>
   );
 };
